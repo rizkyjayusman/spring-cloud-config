@@ -3,7 +3,9 @@ spring:
     config:
       server:
         git:
-          uri: git@gh_personal:rizkyjayusman/spring-cloud-config.git
+          uri: ${GITHUB_REPO_URI}
+          username: ${GITHUB_USER}
+          password: ${GITHUB_TOKEN}
           default-label: main
           search-paths: app-config
 logging:
